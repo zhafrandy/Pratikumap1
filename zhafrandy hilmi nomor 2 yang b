@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    float s;
+    float t;
+    cout << "Program menghitung kecepatan\n";
+    cout << "Jarak tempuh : ";
+    cin >> s;
+    cout << "Waktu tempuh : ";
+    cin >> t;
+    cout << "Kecepatannya adalah : " << s / t << "km/jam" << endl;
+
+    cin.get();
+    return 0;
+}
