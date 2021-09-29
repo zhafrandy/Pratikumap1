@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+    float f = 56700000;
+    float i = 0.06;
+    float n;
+    float p;
+    float q;
+    //i f adalah saldo 3 tahun yang akan datang, i adalah bunga, n adalah periode pembungaan.
+    cout<<"Saldo 3 tahun yang akan datang adalah Rp.56700000"<<endl;
+    cout<<"Silahkan menghitung tabungan anda jika bunga anda 6%"<<endl;
+    cout<<"Pilih Periode Pembungaan"<<endl;
+    cout<<"Pilih 3 untuk pertahun"<<endl;
+    cout<<"Pilih 6 untuk persemester"<<endl;
+    cin>>n;
+    q=pow((1+i),n);
+    p=f/q;
+    cout<<"Maka Tabungan anda saat ini adalah Rp. ";
+    cout<<fixed<<p<<endl;
+    
+    
+    
+}
