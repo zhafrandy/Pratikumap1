@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+cout << "Program Menghitung Gaji Karyawan" << endl;
+    cout << "---------------------------------" << endl;
+    cout << endl;
+
+    string nama, bulan;
+    char golongan;
+    int jam_kerja, gapok, tahun, upah_lembur_jam, jam_lembur, upah_lembur, total_gaji;
+
+    cout << "Masukkan Nama Karyawan : ";
+    getline(cin, nama);
+    cout << "Masukkan Golongan : ";
+    cin >> golongan;
+    cout << "Masukkan Jumlah Jam Kerja : ";
+    cin >> jam_kerja;
+    cout << "Masukkan Bulan Kerja Yang Akan Dihitung : ";
+    cin >> bulan;
+    cout << "Masukkan Tahun : ";
+    cin >> tahun;
+
+    switch (golongan) {
+    case '1':
+        gapok = 1000000;
+        upah_lembur_jam = 10000;
+        break;
+    case '2':
+        gapok = 2000000;
+        upah_lembur_jam = 20000;
+        break;
+    case'3':
+        gapok = 3000000;
+        upah_lembur_jam = 30000;
+        break;
+    case'4':
+        gapok = 4000000;
+        upah_lembur_jam = 40000;
+        break;
+    case'5':
+        gapok = 5000000;
+        upah_lembur_jam = 50000;
+        break;
+    }
+    {
+        if (jam_kerja > 150) {
+            jam_lembur = jam_kerja - 150;
+        }
+        else {
+            jam_lembur = 0;
+        }
+        upah_lembur = jam_lembur * upah_lembur_jam;
+        total_gaji = gapok + upah_lembur;
+    }
+    cout << endl;
+
+    cout << "_____________" << endl;
+    cout << "Gaji Bulan " << bulan <<" " << tahun<<endl;
+    cout << "_____________" << endl;
+    cout << "Gaji Pokok : Rp. " << gapok << endl;
+    cout << "Upah Lembur : Rp. " << upah_lembur << endl;
+    cout << "Total Gaji yang Diterima Bulan Ini : Rp. " << total_gaji << endl;
+
+
+}
